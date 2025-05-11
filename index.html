@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TypeThat</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="logo">
+				<p>Type<b>That!</b></p>
+			</div>
+			<ul class="navLinks">
+				<li class="navLi"><a href="#">Strona Główna</a></li>
+				<li class="navLi"><a href="#">Harmonogram Rozgrywek</a></li>
+				<li class="navLi"><a href="#">Obstaw Mecz</a></li>
+				<button class="loginButton"><a href="#">Zaloguj się</a></button>
+			</ul>
+		</nav>
+
+		<header class="heroImg">
+			<div class="heroText">
+				<h1>Type<span class="heroThat">That!</span></h1>
+				<p>
+					Witamy na stronie na której będziesz mógł obstawić wyniki twoich
+					lokalnych drużyn!
+				</p>
+			</div>
+			<div class="heroShadow"></div>
+		</header>
+
+		<section class="matchSection">
+			<div class="wrapper">
+				<h2>Obstaw Mecze</h2>
+				<form class="matchForm" action="submitTypy.php" method="post">
+					<div class="matchCard">
+						<div class="matchControls">
+							<div class="teamColumn">
+								<label class="teams">Zagłębie Lubin</label>
+								<div class="team">
+									<button type="button" onclick="decrementScore('match1team1')">
+										-
+									</button>
+									<input
+										type="number"
+										id="match1team1"
+										name="match1team1"
+										value="0"
+										readonly
+									/>
+									<button type="button" onclick="incrementScore('match1team1')">
+										+
+									</button>
+								</div>
+							</div>
+							<span class="vs">:</span>
+							<div class="teamColumn">
+								<label class="teams">Śląsk Wrocław</label>
+								<div class="team">
+									<button type="button" onclick="decrementScore('match1team2')">
+										-
+									</button>
+									<input
+										type="number"
+										id="match1team2"
+										name="match1team2"
+										value="0"
+										readonly
+									/>
+									<button type="button" onclick="incrementScore('match1team2')">
+										+
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="matchCard">
+						<div class="matchControls">
+							<div class="teamColumn">
+								<label class="teams">Legia Warszawa</label>
+								<div class="team">
+									<button type="button" onclick="decrementScore('match2team1')">
+										-
+									</button>
+									<input
+										type="number"
+										id="match2team1"
+										name="match2team1"
+										value="0"
+										readonly
+									/>
+									<button type="button" onclick="incrementScore('match2team1')">
+										+
+									</button>
+								</div>
+							</div>
+							<span class="vs">:</span>
+							<div class="teamColumn">
+								<label class="teams">Lech Poznań</label>
+								<div class="team">
+									<button type="button" onclick="decrementScore('match2team2')">
+										-
+									</button>
+									<input
+										type="number"
+										id="match2team2"
+										name="match2team2"
+										value="0"
+										readonly
+									/>
+									<button type="button" onclick="incrementScore('match2team2')">
+										+
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button class="submitButton" type="submit" class="submitButton">
+						wyślij typy!
+					</button>
+				</form>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<button class="footerButton">
+				<a href="">
+					<img src="img/fb_img.png" alt="facebook icon" />
+				</a>
+			</button>
+
+			<button class="footerButton">
+				<a href="">
+					<img src="img/yt_img.png" alt="youtube icon" />
+				</a>
+			</button>
+
+			<p>&copy; 2025 | TypeThat!</p>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>
